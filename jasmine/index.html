@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Desenvolvimento Orientado a Testes com Jasmine</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../lib/css/reveal.css">
+		<link rel="stylesheet" href="../lib/css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../lib/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../lib/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h2>Desenvolvimento</h2><h2>Orientado a Testes com</h2><h2>Jasmine</h2>
+					<p>
+						<small><a href="http://andrec.org">andrec.org</a> | <a href="http://twitter.com/andre_zip">@andre_zip</a></small>
+					</p>
+				</section>
+
+				<section>
+				  <h2>EU</h2>
+				  <img src="http://andrec.org/assets/images/andre.jpg"  style="float:left">
+				  <ul style="float:left; margin-top: 60px">
+						 <li>Front-end Enginner CWI Software;</li>
+						 <li>Blogueiro;</li>
+						 <li>Colaborador Mozilla Brasil;</li>
+						 <li>Organizador do GU Mobile-RS.</li>
+				  </ul>
+				</section>
+
+				<section>
+				  <h2>Conteúdo</h2>
+				  <ul>
+						<li class="">TDD?</li>
+						<li class="">Quando devo testar?</li>
+						<li class="">Por que testar?</li>
+						<li class="">
+						  Jasmine
+							<ul>
+							  <li class="">Matchers</li>
+							  <li class="">Exemplo prático</li>
+							</ul>
+						</li>
+				  </ul>
+				</section>
+				
+				<section>
+				  <h1>TDD?</h1>
+				</section>
+
+				<section>
+				  <p>"Javascript é uma linguagem feia, boba, tem tipagem fraca, tem OO pobre e é horrível de debugar. Mal pode ser considerada linguagem."</p>
+				</section>
+								
+				<section>
+					<h2>Quando devo testar?</h2>
+				</section>
+				
+				<section>
+					<h2>Por que testar?</h2>
+					<ul>
+						<li>Escrever código de qualidade;</li>
+						<li>Diminuir a quantidade de bugs;</li>
+						<li>Manutenção de código;</li>
+						<li>Dormir melhor.</li>
+					</ul>
+				</section>
+
+				<section >
+				  <h2>Observação de Belady-Lehman</h2>
+				  <img src="images/bug-graph.gif">
+				</section>
+						  
+				<section>
+				  <h2>Refatoração</h2>
+					<blockquote> 
+						Se você refatorar código sem ter cobertura de testes, só está mudando a ***** de lugar
+					</blockquote>
+					<br>
+					<p><small>Martin Fowler</small></p>
+				</section>
+
+				<section >
+					<h3>Interfaces simples podem <br>ser complexas</h3>
+					<img src="images/leave_form.gif" />
+				</section>
+
+				<section>
+					<p style="font-size:50px">Em <b>13 elementos</b> 'clicáveis', com <b>3 cliques</b>, em qualquer ordem, temos <b>1716</b> combinações</p>
+					<img src="images/ah.jpg" />
+				</section>
+
+				<section>
+					<h2>Debug</h2>
+					<img src="images/debug.jpg" />
+				</section>
+
+				<section>
+					<h1>Jasmine</h1>
+					<ul>
+						<li>BDD</li>
+						<li>Livre</li>
+						<li>Independe de browser *</li>
+						<li>Sintaxe clara</li>
+						<li>Capaz de testar código assíncrono</li>
+					</ul>
+				</section>
+			  
+				<section data-markdown>
+					<script type="text/template">
+						# Matchers
+						- expect(x).toEqual(y);
+						- expect(x).toBeDefined();
+						- expect(x).toBeUnDefined();
+						- expect(x).toBeNull();
+						- expect(x).toBeTruethy();
+						- expect(x).toBeFalsy();
+						- expect(x).toBeContain(y);
+					</script>
+				</section>
+
+				<section>
+					<h2>Nosso primeiro teste!</h2>
+					<img src="images/happy.png">
+				</section>
+
+				<section>
+					<pre>
+					<code>
+						describe ('comportamento mais abrangante', function () {
+
+						});
+					</code>
+					</pre>
+				</section>
+
+<section>
+  <pre><code>
+  describe ('Fizz Buzz', function () {
+
+      it('numero igual a tres deve retornar fizz', function () {
+          expect(game.init(3)).toEqual("fizz");
+      });
+
+  });
+  </code></pre>
+</section>
+
+<section>
+  <pre><code>
+  describe ('Fizz Buzz', function () {
+      beforeEach(function () {
+          //executa antes de cada spec
+      });
+
+      it('numero igual a tres deve retornar fizz', function () {
+          expect(game.init(3)).toEqual("fizz");
+      });
+
+      afterEach(function () {
+          //executa depois de cada spec
+      });
+  });
+  </code></pre>
+</section>
+
+				<section>
+					<h2>Dependências</h2>
+					<ul>
+						<li>libs/jasmine.css</li>
+						<li>libs/jasmine.js</li>
+						<li>libs/jasmine-html.js</li>
+						<li>libs/jasmine-load.js</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Arquivos</h2>
+					<ul>
+						<li>main.js</script>
+						<li>test.js</li>
+					</ul>
+				</section>
+
+				<section>
+					<a target="_blank" href="exemplo/soma/test/SomaRunner.html" style="font-size: 2em">Exemplo</a>
+				</section>
+
+				<section>
+					<h1>Dúvidas ?</h1>
+				</section>
+
+				<section>
+					<h1>THE END</h1>
+					<p>
+						<small><a href="http://andrec.org">andrec.org</a> | <a href="http://twitter.com/andre_zip">@andre_zip</a></small>
+					</p>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="../lib/lib/js/head.min.js"></script>
+		<script src="../lib/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../lib/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../lib/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../lib/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../lib/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../lib/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../lib/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: '../lib/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: '../lib/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
