@@ -5,7 +5,7 @@ A palestra será um overview sobre Jekyll, gerador de conteúdo estático feito 
 http://andreczip.github.io/palestras/jekyll/
 
 ###Hello AngularJS
-A palestra será um overview sobre Angular JS, framework para camada Java Script, indicado para aplicações de larga escala e mantido pelo grupo de engenheiros da Google, mostrando seus pontos fortes e seu paradigma de programação. Nessa palestra irei abordar algumas das abstrações e magias que tornam o framework mais produtivo e nossas vidas mais felizes.
+A palestra será um overview sobre Angular JS, framework para camada Java Script, indicado para aplicações de larga escala e mantido pelo grupo de engenheiros da Google, mostrando seus pontos fortes e seu paradigma de programação. Nessa palestra irei abordar algumas das abstrações e magias que tornam o framework mais produtivo e nossas vidas mais felizes. http://andreczip.github.io/palestras/angularjs
 
 ###Andre Costa @andreczip
 
