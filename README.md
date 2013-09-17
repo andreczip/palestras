@@ -1,7 +1,7 @@
 ##Palestras
 
 ###Blogando como um Hacker - Jekyll
-A palestra será um overview sobre Jekyll, gerador de conteúdo estático feito para blogs escrito em ruby e utilizada pela "engine" do Github. Vou falar tambem o quanto nossa vida pode ser mais feliz e divertida escrevendo seus artigos usando seu editor de texto predileto.
+A palestra será um overview sobre Jekyll, gerador de conteúdo estático feito para blogs escrito em ruby e utilizada pela "engine" do Github. Vou falar tambem o quanto nossa vida pode ser mais feliz e divertida escrevendo seus artigos usando seu editor de texto preferido, no meu caso o VIM.
 http://andreczip.github.io/palestras/jekyll/
 
 ###Hello AngularJS
