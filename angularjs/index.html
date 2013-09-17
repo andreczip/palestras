@@ -16,6 +16,9 @@
 
 		<link rel="stylesheet" href="../lib/css/reveal.css">
 		<link rel="stylesheet" href="../lib/css/theme/default.css" id="theme">
+		<style>
+			ul li a{ color: #eee!important; }
+		</style>
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="../lib/lib/css/zenburn.css">
@@ -69,8 +72,22 @@
 				<section>
 					<h2>Model-driven Views</h2>
 					<p>Data bind com HTML, templates avançadas com HTML.</p>
+					<br>
+					<pre>
+						<code data-trim>
+							&lt;div ng-repeat="post in posts"&gt;
+							    &lt;div id="template" ng-include="source" /&gt;
+							&lt;/div&gt;
+						</code>
+					</pre>
 				</section>
 
+				<section>
+					<ul>
+						<li>Abstrai manipulação do DOM;</li>
+						<li>Código Clean</li>
+					</ul>
+				</section>
 				<section>
 					<img src="images/meme_chorando.png" class="img-border-none">
 				</section>
@@ -100,7 +117,12 @@
 				</section>
 
 				<section>
-					<h1 style="font-size:14em">?</h1>
+					<h2>Link dessa palestra</h2>
+					<a href="http://andreczip.github.io/palestras/angularjs">Aqui!</a>
+				</section>
+
+				<section>
+					<h1 style="font-size:14em;font-family:Arial;font-weight:bold">?</h1>
 					<h2>Dúvidas</h2>
 				</section>
 
