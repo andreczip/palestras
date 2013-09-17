@@ -16,13 +16,15 @@ Model-driven Views -> Data bind com HTML, templates avançadas com HTML;
 Abstrai manipulação do DOM;
 Código Clean;
 
-
 Não á necessidade de fazer query no DOM
 
 
 Isso é simplesmente lindo
 
 =================
+
+Web componentes
+Implementações da W3C
 
 
 

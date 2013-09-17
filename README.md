@@ -1,7 +1,8 @@
 ##Palestras
 
 ###Blogando como um Hacker - Jekyll
-A palestra será um overview sobre Jekyll, gerador de conteúdo estático feito para blogs escrito em ruby e utilizada pela "engine" do Github. Vou falar tambem o quanto nossa vida pode ser mais feliz e divertida escrevendo seus artigos usando seu editor de texto preferido, no meu caso o VIM.
+A palestra será um overview sobre Jekyll, gerador de conteúdo estático feito para blogs escrito em ruby e utilizada pela "engine" do Github. Vou falar também o quanto nossa vida pode ser mais feliz e divertida quando escrevemos artigos utilizando o nosso editor de texto predileto.
+
 http://andreczip.github.io/palestras/jekyll/
 
 ###Hello AngularJS
@@ -9,5 +10,5 @@ A palestra será um overview sobre Angular JS, framework para camada Java Script
 
 ###Andre Costa @andreczip
 
-Unix maniaco, apaixonado por games e por todos outros cacarecos tecnológicos.
+Unix maníaco, apaixonado por games e por todos outros cacarecos tecnológicos.
 Desenvolvedor web desde 2006, trabalhei profissionalmente com diversas linguagens e plataformas de desenvolvimento, atualmente trabalho com arquitetura e desenvolvimento web/mobile. Freedom Contributor @mozilla, criador do projeto @pkanban e organizador do Grupo de Desenvolvedores Mobile do RS @gumobilers.
