@@ -1,8 +1,8 @@
 ##Responsive E-mail Design
 Com o grande crescimento de dispositivos móveis, a preocupação com a adaptação do design do e-mail aos diversos modelos de dispositivos se tornou indispensável. A idéia dessa "talk" é abordar algumas das boas práticas de desenvolvimento de layouts para emails marketing e ferramentas que poderam nos auxiliar nesse processo de contrução.
 
-##Talk - Hello AngularJS
-A palestra será um overview sobre Angular JS, framework para camada Java Script, indicado para aplicações de larga escala e mantido pelo grupo de engenheiros da Google, mostrando seus pontos fortes e seu paradigma de programação. Nessa palestra irei abordar algumas das abstrações e magias que tornam o framework mais produtivo e nossas vidas mais felizes.
+##Hello AngularJS
+Essa "Talk" é um overview sobre Angular JS, framework para camada Java Script, indicado para aplicações de larga escala e mantido pelo grupo de engenheiros da Google, mostrando seus pontos fortes e seu paradigma de programação. Nessa palestra irei abordar algumas das abstrações e magias que tornam o framework mais produtivo e nossas vidas mais felizes.
 #######KingHost Talk
 http://andreczip.github.io/palestras/angularjs
 
