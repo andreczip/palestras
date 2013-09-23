@@ -11,6 +11,10 @@ A palestra será um overview sobre Jekyll, gerador de conteúdo estático feito 
 #######FLISOL 2012 Porto Alegre
 http://andreczip.github.io/palestras/jekyll/
 
+##Desenvolvimento Web Ágil com CakePHP
+Apresentação da arquitetura do Cake e seus principais features, cases de utilização e no final da apresentação um live coding, implementando um simples e tradicional sistema de blog.
+#######Tchê Linux 2011 - Porto Alegre
+
 ##Sobre
 #####Andre Costa @andreczip
 
