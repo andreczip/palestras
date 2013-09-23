@@ -101,18 +101,18 @@
 				</section>
 
 				<section>
-					<h2>Service</h2>
+					<h3>Service</h3>
 					<br>
 					<pre>
-						<code data-trim>
-						app.service('TodoService', function($http, $q){
+<code data-trim>
+app.service('TodoService', function($http, $q){
 
-						    this.list = function(){
-						      $http({method: 'GET', url: 'lists'}).success(function(data){
-						          return data;
-						    });
-						});
-						</code>
+    this.list = function(){
+      $http({method: 'GET', url: 'lists'}).success(function(data){
+          return data;
+    });
+});
+</code>
 					</pre>
 				</section>
 
@@ -121,25 +121,50 @@
 				</section>
 
 				<section>
-					<h2>Controller</h2>
+					<h3>Controller</h3>
 					<br>
 					<pre>
-						<code data-trim>
-						function TodoCtrl($scope, TodoService) {
+<code data-trim>
+function TodoCtrl($scope, TodoService) {
 
-						  $scope.init = function() {
-						    TodoService.list().then(function(data){
-						      $scope.lists = data;
-						    });
-						  };
+  $scope.init = function() {
+    TodoService.list().then(function(data){
+      $scope.lists = data;
+    });
+  };
 
-						}
-						</code>
+}
+</code>
 					</pre>
 				</section>
 
 				<section>
 					<img src="images/architecture_03.png" class="img-border-none">
+				</section>
+
+				<section>
+					<h3>View</h3>
+					<br>
+					<pre>
+<code data-trim>&lt;!doctype html>
+&lt;html ng-app="myApp">
+&lt;body>
+
+    &lt;h2>Todo List - AngularJS&lt;/h2>
+
+    &lt;div ng-controller="TodoCtrl" ng-init="init()">
+      &lt;ul>
+        &lt;li ng-repeat="list in lists">{{list.text}}&lt;/li>
+      &lt;/ul>
+    &lt;/div>
+
+    &lt;script src="angular.min.js">&lt;/script>
+    &lt;script src="js/app.js">&lt;/script>
+
+&lt;/body>
+&lt;/html>
+</code>
+					</pre>
 				</section>
 
 				<section>
