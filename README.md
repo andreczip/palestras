@@ -1,4 +1,4 @@
-##Responsive Design para E-mail Marketing
+##Responsive E-mail Design
 Com o grande crescimento de dispositivos móveis, a preocupação com a adaptação do design do e-mail aos diversos modelos de dispositivos se tornou indispensável. A idéia dessa "talk" é abordar algumas das boas práticas de desenvolvimento de layouts para emails marketing e ferramentas que poderam nos auxiliar nesse processo de contrução.
 
 ##Talk - Hello AngularJS
