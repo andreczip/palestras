@@ -1,29 +1,25 @@
 var app = angular.module('myApp', []);
 
-app.service('TodoService', function($http){
+app.service('TodoService', function($http, $q){
 
- //    this.list= function(){
- //    	//
-	// 	$http({method: 'GET', url: ''}).
-	// 	  success(function(data, status, headers, config) {
-	// 	    console.log(data);
-	// 	  }).
-	// 	  error(function(data, status, headers, config) {
-	// 	    console.log('Error', config);
-	// 	  });
+	this.list = function(){
 
+		var deferred = $q.defer();
 
-	// };
+		$http({method: 'GET', url: 'lists'}).success(function(data) {
+			deferred.resolve(data);
+      	}).error(function(){
+ 			deferred.reject("An error occured while fetching items");
+      	});
 
-	this.list = function() {
-		var url = "http://api.icndb.com/jokes/?callback=JSON_CALLBACK";
-
-		$http.jsonp(url)
-		.success(function(data){
-			console.log(data);
-		}).error(function(data){
-			console.log('Error');
-		});
+      	return deferred.promise;
 	};
+
+	this.add = function(todoText) {
+		$http({method: 'POST', url: 'lists', data: {text:todoText}}).
+			error(function() {
+				console.log('Error Save');
+		});
+	}
 
 });

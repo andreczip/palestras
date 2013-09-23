@@ -101,7 +101,41 @@
 				</section>
 
 				<section>
+					<h2>Service</h2>
+					<br>
+					<pre>
+						<code data-trim>
+						app.service('TodoService', function($http, $q){
+
+						    this.list = function(){
+						      $http({method: 'GET', url: 'lists'}).success(function(data){
+						          return data;
+						    });
+						});
+						</code>
+					</pre>
+				</section>
+
+				<section>
 					<img src="images/architecture_02.png" class="img-border-none">
+				</section>
+
+				<section>
+					<h2>Controller</h2>
+					<br>
+					<pre>
+						<code data-trim>
+						function TodoCtrl($scope, TodoService) {
+
+						  $scope.init = function() {
+						    TodoService.list().then(function(data){
+						      $scope.lists = data;
+						    });
+						  };
+
+						}
+						</code>
+					</pre>
 				</section>
 
 				<section>
@@ -118,7 +152,7 @@
 
 				<section>
 					<h2>Exemplo</h2>
-					<a href="">aqui</a>
+					<a href="http://localhost:4567/" target="_blanck">aqui</a>
 				</section>
 
 				<section>

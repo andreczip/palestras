@@ -1,12 +1,17 @@
 
 function TodoCtrl($scope, TodoService) {
 
-  $scope.list = TodoService.list();
+	$scope.init = function() {
+		TodoService.list().then(function(data){
+    		$scope.lists = data;
+    	});
+  	};
 
-  $scope.addTodo = function() {
-    $scope.list.push({text:$scope.todoText, done:false});
-    $scope.todoText = '';
-  };
+	$scope.addTodo = function() {
 
+		TodoService.add($scope.todoText);
+		$scope.init();
+		$scope.todoText = '';
+	};
 
 }

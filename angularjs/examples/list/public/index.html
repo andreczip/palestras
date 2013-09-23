@@ -11,7 +11,8 @@
       <h2>Todo List - AngularJS</h2>
 
       <div ng-controller="TodoCtrl">
-        {{list}}
+        <div ng-init="init()">{{list}}</div>
+
         <div class="form-actions">
           <form ng-submit="addTodo()">
             <input type="text" ng-model="todoText" size="30" placeholder="add new todo here">
@@ -20,9 +21,9 @@
         </div>
 
         <ul class="unstyled">
-          <li ng-repeat="todo in todos">
-            <input type="checkbox" ng-model="todo.done">
-            <span class="done-{{todo.done}}">{{todo.text}}</span>
+          <li ng-repeat="list in lists">
+            <input type="checkbox" ng-model="list.done">
+            <span class="done-{{list.done}}">{{list.text}}</span>
           </li>
         </ul>
 

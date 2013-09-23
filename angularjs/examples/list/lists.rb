@@ -22,15 +22,16 @@ end
 # Endpoint GET para obter a última postagem do banco de dados
 get '/lists' do
     content_type :json
-    List.last.to_json
+    List.all().to_json
 end
 
 # Endpoint POST para criar uma nova postagem
 post '/lists' do
     data = JSON.parse request.body.read
 
-    post = List.new
-    post.text = data['text']
+    list = List.new
+    list.text = data['text']
+    list.done = false
 
-    post.save
+    list.save
 end
