@@ -77,23 +77,7 @@
 				</section>
 
 				<section>
-					<h2>Hello World!</h2>
-					<br>
-					<pre>
-<code data-trim>
-&lt;body ng-app&gt;
-  &lt;input type="text" ng-model="name"&gt;
-  &lt;p>Hello, {{name}}&gt;/p&gt;
-
-  &lt;script href="angular.js" /&gt;
-&lt;/body&gt;
-</code>
-					</pre>
-					<a href="examples/hello/index.html" target="_blanck">source</a>
-				</section>
-
-				<section>
-					<h2>MV* ?</h2>
+					<h1>MV* ?</h1>
 				</section>
 
 				<section>
@@ -101,70 +85,11 @@
 				</section>
 
 				<section>
-					<h3>Service</h3>
-					<br>
-					<pre>
-<code data-trim>
-app.service('TodoService', function($http, $q){
-
-    this.list = function(){
-      $http({method: 'GET', url: 'lists'}).success(function(data){
-          return data;
-    });
-});
-</code>
-					</pre>
-				</section>
-
-				<section>
 					<img src="images/architecture_02.png" class="img-border-none">
 				</section>
 
 				<section>
-					<h3>Controller</h3>
-					<br>
-					<pre>
-<code data-trim>
-function TodoCtrl($scope, TodoService) {
-
-  $scope.init = function() {
-    TodoService.list().then(function(data){
-      $scope.lists = data;
-    });
-  };
-
-}
-</code>
-					</pre>
-				</section>
-
-				<section>
 					<img src="images/architecture_03.png" class="img-border-none">
-				</section>
-
-				<section>
-					<h3>View</h3>
-					<br>
-					<pre>
-<code data-trim>&lt;!doctype html>
-&lt;html ng-app="myApp">
-&lt;body>
-
-    &lt;h2>Todo List - AngularJS&lt;/h2>
-
-    &lt;div ng-controller="TodoCtrl" ng-init="init()">
-      &lt;ul>
-        &lt;li ng-repeat="list in lists">{{list.text}}&lt;/li>
-      &lt;/ul>
-    &lt;/div>
-
-    &lt;script src="angular.min.js">&lt;/script>
-    &lt;script src="js/app.js">&lt;/script>
-
-&lt;/body>
-&lt;/html>
-</code>
-					</pre>
 				</section>
 
 				<section>
@@ -186,10 +111,7 @@ function TodoCtrl($scope, TodoService) {
 				</section>
 
 				<section>
-					<h2>Referências</h2>
-					<ul>
-						<li><a href="http://angularjs.org/" target="_blanck">Angularjs.org</a></li>
-					</ul>
+					<a href="http://angularjs.org/" style="font-size:2em" target="_blanck">Angularjs.org</a>
 				</section>
 
 				<section>
