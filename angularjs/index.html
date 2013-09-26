@@ -19,6 +19,7 @@
 		<style>
 			ul li a{ color: #eee!important; }
 			a { outline: none; }
+
 		</style>
 
 		<!-- For syntax highlighting -->
@@ -49,7 +50,7 @@
 				<section>
 					<h1>EU</h1>
 					<p>
-						<small><a href="http://andreczip.github.io">andreczip.github.com</a> | <a href="http://twitter.com/andreczip">@andreczip</a></small>
+						<a href="http://andreczip.github.io">andreczip.com</a> | <a href="http://twitter.com/andreczip">@andreczip</a>
 					</p>
 				</section>
 
@@ -68,7 +69,8 @@
 				</section>
 
 				<section>
-					<h2>Web Componentes</h2>
+					<h2>Web Componentes</h2><br><br>
+					<p>&lt;gravatar>&lt;/gravatar></p>
 				</section>
 
 				<section>
@@ -102,8 +104,68 @@
 
 				<section>
 					<h2>Show me the code</h2>
-					<a href="http://localhost:4567/" target="_blanck">source</a>
+					<a href="http://localhost:4567/" target="_blanck">app</a>
 				</section>
+
+                <section>
+                   <h3>Service</h3>
+                   <br>
+                   <pre>
+<code datatrim>
+app.service('TodoService', function($http, $q){
+
+    this.list = function(){
+      $http({method: 'GET', url: 'lists'}).success(function(data){
+          return data;
+    });
+});
+</code>
+                   </pre>
+
+                </section>
+
+                <section>
+                   <h3>Controller</h3>
+                   <br>
+                   <pre>
+<code datatrim>
+function TodoCtrl($scope, TodoService) {
+
+  $scope.init = function() {
+    TodoService.list().then(function(data){
+      $scope.lists = data;
+    });
+  };
+
+}
+</code>
+                   </pre>
+                </section>
+
+                <section>
+                   <h3>View</h3>
+                   <br>
+                   <pre>
+<code datatrim>&lt;!doctype html>
+&lt;html ngapp="myApp">
+&lt;body>
+
+    &lt;h2>Todo List  AngularJS&lt;/h2>
+
+    &lt;div ngcontroller="TodoCtrl" nginit="init()">
+      &lt;ul>
+        &lt;li ngrepeat="list in lists">{{list.text}}&lt;/li>
+      &lt;/ul>
+    &lt;/div>
+
+    &lt;script src="angular.min.js">&lt;/script>
+    &lt;script src="js/app.js">&lt;/script>
+
+&lt;/body>
+&lt;/html>
+</code>
+                   </pre>
+                </section>
 
 				<section>
 					<h2>Cases ?</h2>
@@ -150,7 +212,7 @@
 
 				<section>
 					<h2>Talk</h2>
-					<small><a href="http://andreczip.github.io/talks">andreczip.github.com/palestras/angularjs</a></small>
+					<a href="http://andreczip.github.io/talks">andreczip.com/palestras/angularjs</a>
 				</section>
 
 				<section>
@@ -159,7 +221,7 @@
 
 				<section>
 					<h1>THE END</h1>
-					<small><a href="http://andreczip.github.io">andreczip.github.com</a> | <a href="http://twitter.com/andreczip">@andreczip</a></small>
+					<a href="http://andreczip.github.io">andreczip.com</a> | <a href="http://twitter.com/andreczip">@andreczip</a>
 				</section>
 
 			</div>
