@@ -48,7 +48,14 @@
 				</section>
 
 				<section>
-					<h1>EU</h1>
+					<h1 style="text-transform:none">@andreczip</h1>
+					<ul>
+						<li>Analista Desenvolvedor Web</li>
+						<li>Entusiasta Software Livre</li>
+						<li>Organizador GU Mobile-rs</li>
+						<li>Colaborador Mozilla Brasil</li>
+					</ul>
+					<br><br><br>
 					<p>
 						<a href="http://andreczip.github.io">andreczip.com</a> | <a href="http://twitter.com/andreczip">@andreczip</a>
 					</p>
@@ -104,68 +111,8 @@
 
 				<section>
 					<h2>Show me the code</h2>
-					<a href="http://localhost:4567/" target="_blanck">app</a>
+					<a href="https://github.com/andreczip/palestras/tree/master/angularjs/examples" target="_blanck">app</a>
 				</section>
-
-                <section>
-                   <h3>Service</h3>
-                   <br>
-                   <pre>
-<code datatrim>
-app.service('TodoService', function($http, $q){
-
-    this.list = function(){
-      $http({method: 'GET', url: 'lists'}).success(function(data){
-          return data;
-    });
-});
-</code>
-                   </pre>
-
-                </section>
-
-                <section>
-                   <h3>Controller</h3>
-                   <br>
-                   <pre>
-<code datatrim>
-function TodoCtrl($scope, TodoService) {
-
-  $scope.init = function() {
-    TodoService.list().then(function(data){
-      $scope.lists = data;
-    });
-  };
-
-}
-</code>
-                   </pre>
-                </section>
-
-                <section>
-                   <h3>View</h3>
-                   <br>
-                   <pre>
-<code datatrim>&lt;!doctype html>
-&lt;html ngapp="myApp">
-&lt;body>
-
-    &lt;h2>Todo List  AngularJS&lt;/h2>
-
-    &lt;div ngcontroller="TodoCtrl" nginit="init()">
-      &lt;ul>
-        &lt;li ngrepeat="list in lists">{{list.text}}&lt;/li>
-      &lt;/ul>
-    &lt;/div>
-
-    &lt;script src="angular.min.js">&lt;/script>
-    &lt;script src="js/app.js">&lt;/script>
-
-&lt;/body>
-&lt;/html>
-</code>
-                   </pre>
-                </section>
 
 				<section>
 					<h2>Cases ?</h2>
