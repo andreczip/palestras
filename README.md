@@ -1,3 +1,8 @@
+## LGPD
+Essa "talk" abordo sobre as mudanças causadas com a nova lei LGPD Lei Geral de Proteção de Dados que acaba de entrar em vigor.
+### NOZ Talk
+http://f0rmig4.github.io/talk/lgpd
+
 ## Hello AngularJS
 Essa "Talk" é um overview sobre Angular JS, framework para camada Java Script, indicado para aplicações de larga escala e mantido pelo grupo de engenheiros da Google, mostrando seus pontos fortes e seu paradigma de programação. Nessa palestra irei abordar algumas das abstrações e magias que tornam o framework mais produtivo e nossas vidas mais felizes.
 ### KingHost Talk
