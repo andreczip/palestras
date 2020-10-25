@@ -43,7 +43,8 @@ Basicamente todas as empresas terão que atender a LGPD. A principal premissa é
 
 Agora é necessário deixar especificado quais fins serão dados para as informações coletadas. A autorização deve ser requerida de forma clara, direta e informando qual será a utilização desses dados.
 
-Para exemplificar, se um indivíduo contrata um serviço de qualquer natureza e precisa fornecer informações pessoais para obtê-lo, será obrigatório justificar a necessidade disso. Fica vetado o uso dos dados para outras finalidades que não sejam as que foram acordadas.
+Para exemplificar eu trago um exemplo do nosso cliente noite dos museus.
+Fica vetado o uso dos dados para outras finalidades que não sejam as que foram acordadas.
 
 ## FIM DO CICLO DA INFORMAÇÃO
 
@@ -53,6 +54,8 @@ Uma vez solicitada a retirada dos dados do sistema pelo usuário a empresa deve 
 A LGPD também garante aos usuários o direito de responsabilizar as empresas caso seus dados sejam roubados por terceiros. Quem descumprir a lei pode ser multado em R$ 50 milhões por infração ou em até 2% do faturamento.
 
 ## CONCLUSAO
-O simples fato de estarmos discutindo a lei mostra que ela por si só te um papel educativo importante, a história nos mostra que as leis têm o dever de estabelecer mudanças comportamentais e culturais dentro da nossa sociedade. Nós só compartilhamos informações com quem confiamos e o mesmo deve ser feito com os dados pessoais. A partir de agora os indivíduos só trocarão dados com quem confiam efetivamente e a confiança vem de tudo que foi citado anteriormente no que tange a transparência, a segurança e a ética.
+O simples fato de estarmos discutindo a lei mostra que ela por si só te um papel educativo importante
 
-A LGPD é muito maior que apenas cumprir uma obrigação jurídica existente, tem a ver com competitividade comercial, pois se você não for transparente e confiável,as pessoas não irão compartilhar seus dados com você.
+Nós só compartilhamos informações com quem confiamos e o mesmo deve ser feito com os dados pessoais. A partir de agora os indivíduos só trocarão dados com quem confiam e a confiança vem de tudo que foi citado anteriormente no que tange a transparência, segurança e ética.
+
+A LGPD é muito maior que apenas cumprir uma obrigação jurídica, tem a ver com competitividade comercial, pois se você não for transparente e confiável, as pessoas não irão compartilhar seus dados com você.
