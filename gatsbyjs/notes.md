@@ -1,82 +1,83 @@
+# Gastby
+## 1
+	Vou falar como uma determinada tecnologia me ajudou a performa melhores resultados
 
-Jekyll -Blogando como um Hacker
+## f0rmig4
+	Artesao de bits, unixmaniaco, apaixonado por tecnologia e todos cacarecos tecnologicos
+	Porto Alegre Rio grande do Sul
+	pai da luz
+	Estudante de clarinete e Jazz
 
-Vou falar sobre Jekyll, gerador de conteúdo estático utilizado pelo Github e criado por Tom Preston-Werner, co-fundador e também criador do GitHub.
+## O que é GatsbyJS?
 
-- Sobre mim
+	É um gerador de sites incrivelmente rápido para React, o site oficial define desta forma. Mas o que eles querem dizer:
 
-- Por que vim aqui:
-	
-	Mantenho um blog a cada 4 anos sempre postando artigos referêntes a atualizadas de desenvolvimento de software, nesse meio tempo ja utilizei alguns CMS (quem não sabe o que é CMS) e o que eu mais me adaptei foi Wordpress.
-	Emfim eu usei wordpress por todo esse tempo, mas nunca me adaptei com a interface de administração dele, como um bom programador tinha a necessidade de abrir o html e editar diretamente no codigo fonte.
+	É incrivelmente rápido! Pode acreditar em mim, qualquer pessoa que visitar o seu site vai dizer Ohhhh!
 
-	Só que isso é uma coisa um tanto quanto desmotivadora pois essas interfaces gráficas não fornecem um forma boa para edição do fonte, foi assim  que cheguei nos "statics generates", especificamente no Jekyll.
+	Você pode criar sites usando-o react.js e todo o seu conteúdo é gerado em por um build.
 
-	E de cara foi amor a primeira vista, eu pirei de amor com a possibilidade de ter meu site inteiro em arquivos estáticos, podendo criar meus posts utilizando apenas o VIM.
+	Mais para frente eu vou abordar um case de sucesso
 
-	Sim, eu sei que é um sentimento nerd e que é difícil de explicar. Como um bom usuário Linux que sou, com poucos comando eu posso criar, buscar e fazer o deploy dos meus artigos utilizando apenas meu bom e velho console. Cheguei a quase chorar de emoção.
+## Por que usar o Gatsby?
 
+	Acessos Mobile 2021: > 50%
+	2021 entra "Google Core Web Vital"
+	Que é descrita pela Google como "a chave para o sucesso de qualquer site na web".
 
-	 O post Blogging like a Hacker do Tom Preston-Werner, apresenta uma forma bem legal de blogar, onde todo o suporte fica por conta do Github.
+	Performace
+	Acessibilidade
+	Boas Praticas
+	SEO
 
-- O que é Jekyll?
-	Jekyll é um gerador de blog estático, em que você cria seus posts em Markdown (http://pt.wikipedia.org/wiki/Markdown) e eles são convertidos para HTML. É estático, ele não usa banco de dados ou conteúdo dinâmico gerado em runtime.
+	Core Web Vitals nada mais é que um algoritomo com um conjunto de metricas relacionadas a velocidade, carregamento da página e facilidade de uso para dispositivos móveis, para compor os fatores de rankeamento do Google.
 
+	Aí que o Gatsby entra, oferecendo uma arquitetura para os sites otimizaçao dos nossos websites
 
-- Estrutura Jekyll e funcionamento (font)
+## Quem usa
 
-	No meu Github você pode conferir como organizei meus arquivos. Inicialmente, tenho 4 diretórios importante: _layouts, _layouts, _attachments, _posts, _plugins. Esses diretórios são explicativos por si só, porém o diretório _plugins no meu caso serve para configurar o Bundler e permitir que eu utilize o Gemfile para gerenciar as depêndencias. 
+## Como funciona
 
-- Motivos que devo usar "static generaters"	
+## Quais as vantagens
+	Porque devemos considerar usar o Gasby
+	Eu trouxe alguns itens que gostaria de abordar
 
-	- Segurança - Eu nunca vou ter que me preocupar com as vulnerabilidades em WordPress ou PHP novamente.
+# Performace
+	Eu já mencionei o termo 'rápido' e 'velocidade' muitas vezes nesse artigo, e claro todos sabemos que arquivos estáticos trazem essa característica.
 
-	- Desempenho - Arquivos estáticos são rápidos.
+# Segurança
 
-	- Portabilidade - Se eu precisar migrar para outro host, eu posso instalar Jekyll no novo host ou simplesmente apertar a saída de uma instalação local Jekyll.
+	Nunca mais vou me preocupar com vulnerabilidade na minha aplicação, pois arquivos estáticos não deixam nenhuma porta aberta para ataques.
 
-	- Custo - Hospedagem free no GitHub Pages, agora estou livre para cancelar meu serviço de hospedagem pago.
+# Plugins
 
-	- Domínio Próprio - Por padrão o site fica disponível em you_user.github.com, mas de forma simples existe a possibilidade de incluir um domínio próprio.
+	Existem muitos plugins úteis disponíveis no site oficial do Gatsby, que podem ser adicionados facilmente na aplicação via npm. Alguns exemplos de plugins:
 
+    gatsby-plugin-image: Adicionar imagens responsivas ao seu site e, ao mesmo tempo, mantendo alto desempenho;
 
-	Se todas essas razões soar bem para você, pergunte-se ...
-	Devo migrar?
-	
-- Github Pages
+    gatsby-source-wordpress: Obtenha dados do WordPress de forma escalável e eficiente com WPGraphQL;
 
-	Quando estava reconstruindo o blog usando Jekyll achava que iria hospedar no Heroku. Mas depois conheci o Github Pages. Eu nunca tinha usado esse serviço do Github que hospeda conteúdo estático e achei a melhor opção. A cada push no repositório ele já detecta que tem alterações, refaz o conteúdo estático e faz o deploy. E como o Jekyll foi criado pelo próprio pessoal do Github, tem um FAQ bem completo pra tirar as dúvidas. 
+    gatsby-plugin-react-helmet: Usado para gerir metatags e SEO;
 
-- Comentários
-	O que pode ser um pouco mais complicado são os comentários. Como Jekyll é estático, você tem que achar uma outra opção.Eu estou usando o DISQUS. 
+    gatsby-plugin-google-tagmanager: Adiciona facilmente o Google Tagmanager ao site Gatsby.
 
-- Migração Wordpress
-	Aliás, por falar em Wordpress, o Jekyll tem diversas tasks para Blog Migrations
-	https://github.com/mojombo/jekyll/wiki/blog-migrations
+	Existem muitos plugins disponíveis que podem nos ajudar a acelerar a maior parte do trabalho e tornar nossa aplicação mais rica.
 
-- Outros geradores
-	- DocPad, um static generator em NodeJS (https://github.com/bevry/docpad)
-	- Octopress	
+# Starters
+	Os Staters do Gatsby são templates que já vem com a estrutura criada e que agiliza o processo de desenvolvimento. No site oficial tem um filtro onde você pode buscar uma template com determinada característica, por exemplo: Gatsby 3 + Bootstrap.
 
-- Sites que utilizam Jekyll
-	
-	github.com/mojombo/jekyll/wiki/Sites
+	A documentação é super amigável, e eu definitivamente recomendo que você comece por aí se quiser aprender Gatsby. 
 
-	O primeiro site dessa lista é do Tom Preston-Werner.
+# Baseado em ReactJs
 
-	Caso você queira saber mais a respeito do jekyll, de como instala-lo e utiliza-lo, segue abaixo algumas referências:
+	A comunidade ReactJs é poderosa com muitos componentes existentes a um clique de distância.
 
-- Referências
+# Facilidade de integração com CMS
 
-	- GitHub Pages https://help.github.com/categories/20/articles
-	- Projeto Jekyll - GitHub https://github.com/mojombo/jekyll
-	- Wiki Jekyll - https://github.com/mojombo/jekyll/wiki
-	
-	- http://andersonleite.com.br/2013/01/28/blogando-como-hacker.html
+	Nos possibilita integração com os principais gerenciadores de conteúdo do mercado, o Wordpress por exemplo, que hoje gerencia mais de 30% de toda a internet.
 
-- Dúvidas
+# SEO
+	Gatsby permite que seus sites aproveitem várias técnicas de otimização de SEO. Isso faz com que seu site seja classificado em uma posição mais elevada nos mecanismos de pesquisa. Existem também muitos plug-ins que podem ajudá-lo a facilitar o trabalho
 
-- Links	
+# Case
 
-
-- Obrigado por sua paciencia e por sua atenção e Que a força esteja com vocês!	
+# Show me de Code
