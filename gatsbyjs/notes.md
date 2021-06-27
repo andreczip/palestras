@@ -81,3 +81,15 @@
 # Case
 
 # Show me de Code
+
+brew install node
+node - v
+npm install -g gatsby-cli
+gatsby --version
+gatsby --help
+
+gatsby new blog https://github.com/gatsbyjs/gatsby-starter-blog
+cd blog
+gatsby develop
+gatsby build
+gatsby clean
