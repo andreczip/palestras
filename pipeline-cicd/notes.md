@@ -242,6 +242,8 @@ Digamos que a cada "commit" em meu repositório local eu queira garantir que meu
 #
 python3 manage.py test
 
+chmod 777 .git/hooks/pre-commit
+
 # criar os testes
 Agora vamos criar uma rotina bem simples onde toda vez que dermos um push ele vai rodar todos os testes para nos e dar uma resposta.
 
