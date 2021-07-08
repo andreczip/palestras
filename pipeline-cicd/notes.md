@@ -50,7 +50,8 @@ Porque devemos considerar o uso de CI/CD
 
 2. Isolamentos de falhas
 
-Conseguimos garantir mais agilidade em detectar e isolar o problema antes que ele possa causar mais queda de cabelo
+Conseguimos garantir mais velocidade em encontrar
+e isolar o problema antes que ele possa causar mais queda de cabelo
 
 
 ##
@@ -76,26 +77,29 @@ Maior qualidade nas entregas, com menor indice de erro e retrabalho.
 ##
 Show me de code
 
-Bem agora chegou a hora de botar a mão na massa, pretendo criarmos juntos uma aplicação simples em Django aplicando as técnicas de TDD. Ao final da talk vamos configurar o Github Action para cumprir a premissa de CI e no último momento configurar nosso CD integrado com o Heroku.
+Bem agora chegou a hora de botar a mão na massa, pretendo criarmos juntos uma aplicação simples em Django aplicando as técnicas de TDD. Ao final da talk vamos configurar o Github Action para cumprir a premissa de CI.
 
+mkdir djangoapp
+cd djangoapp
+pyenv activate resale
+pip install django
+python3 -m django --version
 
-Organização dos testes unitários no Django
+django-admin startproject core .
+python3 manage.py startapp question
+
+python3 manage.py migrate
+
+# inserir o app
+vi core/settings.py
+
+python3 manage.py runserver
+
+# organização dos testes unitários no Django
 
 Como o nome sugere, é um teste de uma unidade. E o que é considerado uma unidade? Um bloco de código, como por exemplo um modelo é uma função, uma classe enfim.
 
 A intenção em criar testes unitários é que você tenha principalmente um passo a passo de como resolver um problema.
-
-1 - Configurando projeto inicial:
-
-Para ganharmos tempo eu criei um projeto inicial com Django Admin que tem basicamente a seguinte estrutura:
-
-Clone o repositório e depois baixe a branch para iniciarmos a brincadeira
-
-git clone https://github.com/f0rmig4/django-pipeline.git
-cd django-pipeline
-git fetch origin feature/init:feature/init
-git checkout feature/init
-
 
 A estrutura em árvore do projeto criado é semelhante à seguinte.
 
@@ -128,15 +132,17 @@ Para organiuzarmpos nossos testes unitarios todos deste models ira ficar confuso
    ├── models.py
    ├── tests
        └── unittest
-    ├── tests_models.py
-    ├── tests_views.py
+        ├── tests_models.py
+        ├── tests_views.py
            └── tests_forms.py
    └── views.py
  
 
-Como nossa aplicação pode ter vários tipos de testes, como unitários, integração, eu sugiro criar um diretório para cada tipo de testes e posteriormente dividir as rotinas com as suas respectivas responsabilidades, como o exemplo acima.
+Como nossa aplicação pode ter vários tipos de testes, como unitários, integração, eu sugiro criar um diretório para cada tipo de testes e posteriormente dividir as rotinas com as suas respectivas responsabilidades.
 
 Essa estrutura é sugerida para cada aplicação, caso tenhamos 10 aplicações no projeto devemos seguir essa estrutura. Obviamente não é uma regra e sim apenas uma sugestão de padronização e organização.
+
+vamos agora criar o nosso arquivo __init__.py
 
 
 2 -  Criando nossos testes
@@ -160,32 +166,30 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 
 
-Uma dica bacana, caso você esteja utilizando PostgreSQL o usuário do banco de dados deve ter permissão de criar databases, durante a execução dos testes é criado um banco de dados temporária e depois também é destruído assim que os testes rodam. No caso do SQLite não será necessário.
-
 Enfim vamos criar nosso primeiro teste, dentro do arquivo question/tests/tests_models.py
+
+
 vamos criar a seguinte classe:
 
 from django.test import TestCase
 from ..models import Question
+
  
 class QuestionTestCase(TestCase):
+
+# minha ideia e criar o metodo setUp, esse metodo roda sempre antes dos testes, nele eu vou criar um question
    def setUp(self):
        Question.objects.create(
-           name="You are you?",
+           name="Ola Mundo",
            amount=12
        )
-  
+
+# todo método de teste deve iniciar com “test_”
    def test_return_str(self):
-       q = Question.objects.get(name="You are you?")
-       self.assertEquals(q.__str__(), "You are you?")
+# penso em criar um teste apenas para asegurar que minha modelo sempre vai retorna "ola mundo"
+       q = Question.objects.get(name="Ola Mundo")
+       self.assertEquals(q.__str__(), "Ola Mundo")
  
-
-
-O primeiro passo a ser dado é importar os models.
-Podemos observar que o método setup, é executado toda vez que a classe é chamada, neste exemplo estamos utilizando para criar uma question antes de rodar o teste.
-Uma coisa importante todo método de teste deve iniciar com “test_”
-No exemplo o test_return_str vai assegurar que minha controle sempre vai retornar o valor “You are you?”
-
 
 Agora vamos no terminal e vamos rodar os testes da nossa aplicação question:
 
