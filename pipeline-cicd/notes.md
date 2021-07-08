@@ -218,15 +218,37 @@ git flow init
 git config user.name "f0rmig4"
 git config user.email f0rmig4@protonmail.com
 
-Agora vamos criar uma rotina bem simples onde toda vez que dermos um push ele vai rodar todos os testes para nos e dar uma resposta.
 
+## vamos adicionar um git hook na nossa pipeline
+ Mas o que são "hooks"?
+
+São scripts que podem ser disparados quando certas ações especiais são invocadas. Se o script "hook" retorna um código de saída 0, o "Git" continua executando normalmente. Para qualquer código diferente de zero, o "Git" interrompe a operação. É muito simples!
+
+Geralmente existem dois tipos de hooks: os do lado do cliente, que de modo geral são operações de "commit" ou "merge"; e os "hooks" do lado do servidor, que poderão ser um "push", por exemplo. Você pode criar seu script "hook" em diversas linguagem, a maioria deles são escritos em Shell, mas também podem ser escritos em PHP, Python, Ruby ou na linguagem que você preferir, o único detalhe a se observar é que ele terá que ser um script executável.
+
+Os "hooks" encontram-se dentro do seu diretório .git/hooks e por padrão esse diretório vem preenchido com uma série de exemplos:
+
+### ls .git/hooks
+
+Criando um "Hook":
+
+Digamos que a cada "commit" em meu repositório local eu queira garantir que meus testes sejam rodados. Para isso será necessário criar um "hook pre-commit" que, conforme o nome sugere, ele sempre é executado antes commit e será usado para inspecionar o "snapshot" que está prestes a ser comitado. Bem, vamos por a mão na massa.
+
+1 - Primeiro criamos nosso arquivo:
+
+# vi .git/hooks/pre-commit
+
+#!/bin/sh
+#
+python3 manage.py test
+
+# criar os testes
+Agora vamos criar uma rotina bem simples onde toda vez que dermos um push ele vai rodar todos os testes para nos e dar uma resposta.
 
 Agora vamos no github para criar a nossa pipeline.
 Primeiro acesse o repositório do github onde esta o seu projeto e depois acesse a aba actions
 
 Agora selecione a opção “Python application” e vamos realizar o setup do nosso workflow
-
-Agora devemos alterar nosso workflow para ficar algo semelhante com a imagem abaixo, podemos analisar que em cada passo é dado uma instrução e ainda devemos observar que será necessário criar o arquivo requirements.txt para instalar as dependências. Então na raiz do projeto execute os seguintes comandos.
 
 git flow feature start requirement 
 touch requirements.txt
@@ -257,3 +279,4 @@ pip install gunicorn
 echo "gunicorn" >> requirements.txt
 
 pip install django-heroku
+echo "django-heroku" >> requirements.txt
