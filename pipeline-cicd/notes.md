@@ -211,16 +211,14 @@ Destroying test database for alias 'default'...
 
 CI com Django usando Github Actions
 
-
 # vamos upar o projeto no github
 git init
 git flow init
 git config user.name "f0rmig4"
 git config user.email f0rmig4@protonmail.com
 
-
-## vamos adicionar um git hook na nossa pipeline
- Mas o que são "hooks"?
+## mas antes vamos  adicionar um git hook na nossa pipeline
+ Bem mas o que são "hooks"?
 
 São scripts que podem ser disparados quando certas ações especiais são invocadas. Se o script "hook" retorna um código de saída 0, o "Git" continua executando normalmente. Para qualquer código diferente de zero, o "Git" interrompe a operação. É muito simples!
 
