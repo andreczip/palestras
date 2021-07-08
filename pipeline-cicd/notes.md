@@ -48,7 +48,7 @@ Porque devemos considerar o uso de CI/CD
 
 ##
 
-2. Isolamentos de falhas
+1. Isolamentos de falhas
 
 Conseguimos garantir mais velocidade em encontrar
 e isolar o problema antes que ele possa causar mais queda de cabelo
@@ -56,20 +56,20 @@ e isolar o problema antes que ele possa causar mais queda de cabelo
 
 ##
 
-3. Mais confiabilidade do teste
+2. Mais confiabilidade do teste
 
 A confiabilidade do teste aumenta devido a utilização de teste unitário que irá cobrir parte dos cenários de testes da aplicação.
 
 ##
 
-4. Menor lista de pendências
+3. Menor lista de pendências
 
 Incorporar CI / CD ao processo de desenvolvimento da nossa firma reduz o número de defeitos não críticos em nosso backlog. Esses pequenos defeitos são detectados antes de subir produção e corrigidos antes de serem liberados para os usuários finais.
 
 
 ##
 
-5. Reduzir custos
+4. Reduzir custos
 
 Maior qualidade nas entregas, com menor indice de erro e retrabalho.
 
@@ -142,8 +142,7 @@ Como nossa aplicação pode ter vários tipos de testes, como unitários, integr
 
 Essa estrutura é sugerida para cada aplicação, caso tenhamos 10 aplicações no projeto devemos seguir essa estrutura. Obviamente não é uma regra e sim apenas uma sugestão de padronização e organização.
 
-vamos agora criar o nosso arquivo __init__.py
-
+# vamos agora criar o nosso arquivo __init__.py
 
 2 -  Criando nossos testes
 
