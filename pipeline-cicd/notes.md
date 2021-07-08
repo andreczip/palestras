@@ -95,6 +95,7 @@ vi core/settings.py
 
 python3 manage.py runserver
 
+
 # organização dos testes unitários no Django
 
 Como o nome sugere, é um teste de uma unidade. E o que é considerado uma unidade? Um bloco de código, como por exemplo um modelo é uma função, uma classe enfim.
@@ -210,6 +211,13 @@ Destroying test database for alias 'default'...
 
 CI com Django usando Github Actions
 
+
+# vamos upar o projeto no github
+git init
+git flow init
+git config user.name "f0rmig4"
+git config user.email f0rmig4@protonmail.com
+
 Agora vamos criar uma rotina bem simples onde toda vez que dermos um push ele vai rodar todos os testes para nos e dar uma resposta.
 
 
@@ -235,7 +243,17 @@ Vamos fazer um compair e um pull request
 
 Ponha uma mensagem se achar necessario e criei o pull request
 
-Agora podemos ver que a pipeline rodou com sucesso e quebrou na etapa de rodas os testes, muito provavelmente porque o comando que passei foi python3
+# CD Heroku
+https://devcenter.heroku.com/articles/django-app-configuration
 
+heroku login
 
-Também recebi um email de falha na nossa rotina.
+touch Procfile
+echo "web: gunicorn myproject.wsgi" >> Procfile
+
+## Este Procfile requer Gunicorn, o servidor web de produção que recomendamos para aplicativos Django. Para obter mais informações, consulte Implementando aplicativos Python com Gunicorn. 
+
+pip install gunicorn
+echo "gunicorn" >> requirements.txt
+
+pip install django-heroku
